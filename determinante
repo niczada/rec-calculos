@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int matriz[3][3];
+    int determinante;
+
+    // Solicita ao usuário os elementos da matriz 3x3
+    printf("Insira os elementos da matriz 3x3:\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    // Calcula a determinante da matriz 3x3
+    determinante = (matriz[0][0] * matriz[1][1] * matriz[2][2] +
+                    matriz[0][1] * matriz[1][2] * matriz[2][0] +
+                    matriz[0][2] * matriz[1][0] * matriz[2][1]) -
+                   (matriz[2][0] * matriz[1][1] * matriz[0][2] +
+                    matriz[2][1] * matriz[1][2] * matriz[0][0] +
+                    matriz[2][2] * matriz[1][0] * matriz[0][1]);
+
+    // Imprime o resultado
+    printf("Sua determinante é: %d\n", determinante);
+
+    return 0;
+}
