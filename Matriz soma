@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+
+    // Solicita ao usuário as dimensões das matrizes
+    printf("Insira o número de linhas e colunas das matrizes: ");
+    scanf("%d %d", &rows, &cols);
+
+    int matriz1[rows][cols];
+    int matriz2[rows][cols];
+    int resultado[rows][cols];
+
+    // Solicita ao usuário os elementos das duas matrizes
+    printf("Insira os elementos da primeira matriz:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &matriz1[i][j]);
+        }
+    }
+
+    printf("Insira os elementos da segunda matriz:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &matriz2[i][j]);
+        }
+    }
+
+    // Realiza a soma das matrizes
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            resultado[i][j] = matriz1[i][j] + matriz2[i][j];
+        }
+    }
+
+    // Imprime o resultado
+    printf("Resultado da soma das matrizes:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t", resultado[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
